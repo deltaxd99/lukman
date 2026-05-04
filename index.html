@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Cikareo Utara - Kecamatan Wado, Kabupaten Sumedang</title>
+    <meta name="description" content="Website Resmi Desa Cikareo Utara - Desa MANTAP: Mandiri, Aman, Nyaman, Tertib, Agamis, Produktif">
+    
+    <!-- SEO Meta -->
+    <meta name="keywords" content="Desa Cikareo Utara, Wado, Sumedang, gula aren, peternakan ayam, pemerintahan desa">
+    <meta property="og:title" content="Desa Cikareo Utara - Portal Resmi Pemerintahan Desa">
+    <meta property="og:description" content="Desa MANTAP, maju dalam pelayanan, pembangunan, dan kesejahteraan masyarakat">
+    <meta property="og:image" content="beranda.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2E7D32;
+            --accent-yellow: #FBC02D;
+            --identity-red: #D32F2F;
+            --clean-white: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --elegant-gray: #E0E0E0;
+            --dark-gray: #424242;
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --shadow-hover: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        [data-theme="dark"] {
+            --clean-white: #1E1E1E;
+            --light-gray: #2D2D2D;
+            --elegant-gray: #404040;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        .top-header {
+            background: linear-gradient(90deg, var(--primary-green), #4CAF50);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .top-header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .marquee {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .datetime {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .quick-contact {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 80px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            background: white;
+            padding: 8px;
+        }
+
+        .desa-info h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 0;
+        }
+
+        .desa-info p {
+            font-size: 14px;
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            padding: 10px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow));
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .admin-btn {
+            background: linear-gradient(135deg, var(--identity-red), #E53935);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .admin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Hero Section - UPDATED WITH beranda.jpg */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(46,125,50,0.4), rgba(46,125,50,0.4)), 
+                        url('beranda.jpg') center/cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(46,125,50,0.5));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-green), #4CAF50);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stats {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 40px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(20px);
+            padding: 25px 50px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.3);
+            z-index: 2;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-yellow);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Quick Access */
+        .quick-access {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .quick-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid var(--elegant-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-yellow));
+            transition: left 0.4s ease;
+        }
+
+        .quick-card:hover::before {
+            left: 0;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .quick-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-green), #4CAF50);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 20px;
+        }
+
+        /* Profil Desa */
+        .profil {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .profil-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .profil-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .profil-image {
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-yellow));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Timeline */
+        .timeline-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-green), var(--accent-yellow));
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 50px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 50px;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-yellow));
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 4px white;
+        }
+
+        /* Visi MANTAP */
+        .visi-section {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .visi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .visi-card {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .visi-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-green), #4CAF50);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Potensi Unggulan */
+        .potensi-section {
+            padding: 100px 20px;
+            background: var(--light-gray);
+        }
+
+        .potensi-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .potensi-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .potensi-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .potensi-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            transition: transform 0.4s ease;
+        }
+
+        .potensi-card:hover .potensi-image {
+            transform: scale(1.05);
+        }
+
+        /* Pemerintahan */
+        .pemerintahan-section {
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .pemerintahan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .profil-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .profil-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-yellow));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--elegant-gray);
+            color: #B0B0B0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+                bottom: 20px;
+            }
+            
+            .profil-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .potensi-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .timeline-content {
+                width: 100%;
+                margin: 20px 0 0 40px !important;
+            }
+            
+            .logo-img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--elegant-gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="top-header-content">
+            <div class="marquee">
+                <span class="marquee-text">🎉 Selamat Datang di Website Resmi Desa Cikareo Utara, Kecamatan Wado, Kabupaten Sumedang</span>
+            </div>
+            <div class="datetime">
+                <div id="currentDateTime"></div>
+                <div class="quick-contact">
+                    <span><i class="fas fa-phone"></i> (0263) 123456</span>
+                    <a href="#" class="admin-btn">Login Admin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="logo.jpg" alt="Logo Desa Cikareo Utara" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo" style="display: none;">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="desa-info">
+                    <h1>Desa Cikareo Utara</h1>
+                    <p>Kecamatan Wado, Kabupaten Sumedang</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil Desa</a></li>
+                <li><a href="#pemerintahan">Pemerintahan</a></li>
+                <li><a href="#layanan">Layanan Online</a></li>
+                <li><a href="#potensi">Potensi Desa</a></li>
+                <li><a href="#transparansi">Transparansi</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - NOW USING beranda.jpg -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Desa Cikareo Utara</h1>
+            <div class="hero-buttons">
+                <a href="#potensi" class="btn-primary">
+                    <i class="fas fa-compass"></i> Jelajahi Desa
+                </a>
+                <a href="#layanan" class="btn-secondary">
+                    <i class="fas fa-laptop"></i> Layanan Online
+                </a>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="2,450">4.496</div>
+                <div>Jumlah Penduduk</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="8/32">5/19</div>
+                <div>RW/RT</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="127">(data tidak di beritahu)</div>
+                <div>UMKM Aktif</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="25">14</div>
+                <div>Program Desa</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="quick-access reveal">
+        <div class="container">
+            <h2 class="section-title">Layanan Cepat</h2>
+            <div class="quick-grid">
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Surat Online</h3>
+                    <p>Ajukan surat keterangan secara digital</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-users"></i></div>
+                    <h3>Data Penduduk</h3>
+                    <p>Informasi lengkap data kependudukan</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Bantuan Sosial</h3>
+                    <p>Informasi program bantuan sosial</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Transparansi Dana</h3>
+                    <p>Laporan keuangan APBDes terkini</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-store"></i></div>
+                    <h3>Potensi UMKM</h3>
+                    <p>Direktori UMKM unggulan desa</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h3>Aspirasi Warga</h3>
+                    <p>Sampaikan saran dan kritik</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-newspaper"></i></div>
+                    <h3>Berita Desa</h3>
+                    <p>Informasi terkini kegiatan desa</p>
+                </div>
+                <div class="quick-card">
+                    <div class="quick-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Kontak Cepat</h3>
+                    <p>Hubungi kami dengan mudah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Desa -->
+    <section id="profil" class="profil reveal">
+        <div class="container">
+            <h2 class="section-title">Profil Desa Cikareo Utara</h2>
+            <div class="profil-content">
+                <div class="profil-text">
+                    <p>Desa Cikareo Utara berada di Kecamatan Wado, Kabupaten Sumedang, Jawa Barat, berdiri sejak 26 Juni 1982, dengan fokus pada pelayanan warga, pembangunan wilayah, pertanian, dan UMKM untuk mewujudkan desa mandiri, aman, tertib, dan produktif melalui peningkatan layanan publik, pengembangan ekonomi, serta menjaga keamanan.</p>
+                    <br>
+                    <p>Desa memiliki potensi pertanian, UMKM, dan sumber daya alam dengan fasilitas seperti kantor desa, sekolah, tempat ibadah, dan jalan desa, serta terus memanfaatkan teknologi untuk pelayanan yang cepat dan transparan dengan motto Mandiri, Aman, Nyaman, Tertib, Agamis, Produktif.</strong>.</p>
+                </div>
+                <div class="profil-image">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sejarah Timeline -->
+    <section class="timeline-section reveal">
+        <div class="container">
+            <h2 class="section-title">Sejarah Kepemimpinan Desa</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>26 Juni 1982</h3>
+                        <p>Desa Cikareo Utara resmi terbentuk</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1982-1985</h3>
+                        <p><strong>Kusmayadi</strong> - Kepala Desa Pertama</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1985-1992</h3>
+                        <p><strong>tjutju Kosasih</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1992-1994</h3>
+                        <p><strong>Agus Hadnan</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>1994-2001</h3>
+                        <p><strong>Saman</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2001</h3>
+                        <p><strong>Use Hasari</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2002-2006</h3>
+                        <p><strong>Tata Rukmana</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2008-Sekarang</h3>
+                        <p><strong>Yayat Ruhiat</strong> - Kepala Desa Incumbent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi MANTAP -->
+    <section class="visi-section reveal">
+        <div class="container">
+            <h2 class="section-title">Visi Desa MANTAP</h2>
+            <p class="section-subtitle">Mandiri, Aman, Nyaman, Tertib, Agamis, Produktif</p>
+            <div class="visi-grid">
+                <div class="visi-card">
+                    <div class="visi-icon">M</div>
+                    <h3>Mandiri</h3>
+                    <p>Ekonomi desa mandiri melalui pengembangan UMKM lokal</p>
+                </div>
+                <div class="visi-card">
+                    <div class="visi-icon">A</div>
+                    <h3>Aman</h3>
+                    <p>Lingkungan aman dan terlindungi untuk semua warga</p>
+                </div>
+                <div class="visi-card">
+                    <div class="visi-icon">N</div>
+                    <h3>Nyaman</h3>
+                    <p>Fasilitas publik nyaman dan ramah lingkungan</p>
+                </div>
+                <div class="visi-card">
+                    <div class="visi-icon">T</div>
+                    <h3>Tertib</h3>
+                    <p>Tata kelola pemerintahan yang tertib dan transparan</p>
+                </div>
+                <div class="visi-card">
+                    <div class="visi-icon">A</div>
+                    <h3>Agamis</h3>
+                    <p>Masyarakat berlandaskan nilai agama dan moral</p>
+                </div>
+                <div class="visi-card">
+                    <div class="visi-icon">P</div>
+                    <h3>Produktif</h3>
+                    <p>Warga produktif dan berdaya saing tinggi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Potensi Unggulan -->
+    <section id="potensi" class="potensi-section reveal">
+        <div class="container">
+            <h2 class="section-title">Potensi Unggulan Desa</h2>
+            <p class="section-subtitle">Kekuatan ekonomi desa yang menjadi kebanggaan warga</p>
+            <div class="potensi-grid">
+                <div class="potensi-card">
+                    <img src="gula aren.jpg" alt="Gula Aren Khas Cikareo Utara" class="potensi-image" onerror="this.src='https://images.unsplash.com/photo-1603048297194-8f7d9e7f8e7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                    <h3>Gula Aren Khas Cikareo Utara</h3>
+                    <p>Produk unggulan desa berbahan alami, bernilai ekonomi tinggi, cocok untuk UMKM lokal dan pemasaran luas.</p>
+                    <a href="#" class="btn-primary" style="margin-top: 20px; display: inline-block;">Lihat Produk</a>
+                </div>
+                <div class="potensi-card">
+                    <img src="ayam.jpg" alt="Peternakan Ayam Produktif Cikareo Utara" class="potensi-image" onerror="this.src='https://images.unsplash.com/photo-1571896349840-0d711cc1b6da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                    <h3>Peternakan Ayam Produktif</h3>
+                    <p>Sumber penghasilan warga, membuka lapangan kerja, mendukung ketahanan pangan daerah.</p>
+                    <a href="#" class="btn-primary" style="margin-top: 20px; display: inline-block;">Lihat Peternakan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pemerintahan -->
+    <section id="pemerintahan" class="pemerintahan-section reveal">
+        <div class="container">
+            <h2 class="section-title">Struktur Pemerintahan Desa</h2>
+            <div class="pemerintahan-grid">
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>kepala desa</h3>
+                    <p>Lili, S.E.</p>
+                </div>
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Sekretaris Desa</h3>
+                    <p>Ujang Kusnandar</p>
+                </div>
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Kasi Pemerintahan</h3>
+                    <p>Sandra Sulaeman</p>
+                </div>
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Kasi Pelayanan</h3>
+                    <p>(Data tidak diberitahu)</p>
+                </div>
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Kaur Keuangan</h3>
+                    <p>(Data tidak diberitahu)</p>
+                </div>
+                <div class="profil-card">
+                    <div class="profil-avatar">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Kepala Dusun</h3>
+                    <p>(Data tidak diberitahu)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="logo.jpg" alt="Logo Desa Cikareo Utara" style="width: 60px; height: 60px; object-fit: contain; margin-bottom: 20px;" onerror="this.style.display='none';">
+                <h3>Desa Cikareo Utara</h3>
+                <p>Kecamatan Wado, Kabupaten Sumedang</p>
+                <p>Desa MANTAP untuk kesejahteraan warga</p>
+            </div>
+            <div class="footer-section">
+                <h3>Link Cepat</h3>
+                <ul style="list-style: none;">
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Beranda</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Profil Desa</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Layanan Online</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Potensi Desa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Layanan</h3>
+                <ul style="list-style: none;">
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Surat Online</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Aspirasi Warga</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Berita & Pengumuman</a></li>
+                    <li><a href="#" style="color: #B0B0B0; text-decoration: none;">Transparansi</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Desa Cikareo Utara No.1</p>
+                <p><i class="fas fa-phone"></i> (0263) 123456</p>
+                <p><i class="fas fa-envelope"></i> info@cikareoutara.sumedang.go.id</p>
+                <div style="margin-top: 20px;">
+                    <a href="#" style="color: var(--accent-yellow); font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" style="color: var(--accent-yellow); font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: var(--accent-yellow); font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pemerintah Desa Cikareo Utara. Semua hak dilindungi. Powered by Pemerintah Desa Cikareo Utara</p>
+        </div>
+    </footer>
+
+    <script>
+        // Current Date Time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = now.toLocaleDateString('id-ID', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // Stats Counter Animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = stat.getAttribute('data-target');
+                const count = +target.replace(/,/g, '');
+                const increment = count / 100;
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= count) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current).toLocaleString() + (target.includes('/') ? '/32' : '');
+                    }
+                }, 20);
+            });
+        }
+
+        // Scroll Animations
+        function revealOnScroll() {
+            const reveals = document2.querySelectorAll('.reveal');
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.querySelector('.theme-toggle i');
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255,255,255,0.98)';
+                navbar.style.boxShadow = '0 10px 40px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255,255,255,0.95)';
+                navbar.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Initialize
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', () => {
+            revealOnScroll();
+            animateStats();
+        });
+
+        // Intersection Observer for better performance
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
